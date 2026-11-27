@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide Alpine-controlled elements until Alpine has started, to avoid a flash. */
+[x-cloak] {
+    display: none !important;
+}
+
+@media print {
+    @page {
+        margin: 1.5cm;
+    }
+
+    /* Keep chart colours when printing; browsers drop backgrounds by default. */
+    .print-exact {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}

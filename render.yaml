@@ -1,0 +1,7 @@
+# Render blueprint: creates the free web service for the hosted demo.
+services:
+  - type: web
+    name: pmos-screening
+    runtime: docker
+    plan: free
+    healthCheckPath: /up
